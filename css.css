@@ -1,0 +1,101 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background: #48bebe;
+}
+.button {
+  align-content: center;
+  flex-wrap: wrap;
+  height: 100vh;
+}
+button {
+  font-size: 25px;
+  outline: none;
+  border: none;
+  background-color: #066666;
+  color: #fff;
+  border-radius: 20px;
+}
+button:hover {
+  background-color: #137979;
+}
+.sheet {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: end;
+  flex-direction: column;
+  align-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.8s;
+}
+.sheet.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+.sheet .ovally {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.2;
+  z-index: -1;
+  background-color: #000;
+}
+.sheet .header {
+  display: flex;
+  justify-content: center;
+}
+.sheet .icon {
+  cursor: grab;
+  user-select: none;
+  padding: 15px;
+  margin-top: -15px;
+}
+.sheet .icon span {
+  width: 42px;
+  height: 10px;
+  display: block;
+  background-color: #90a4ae;
+  border-radius: 50px;
+}
+.sheet .content {
+  background-color: #fff;
+  height: 50vh;
+  max-height: 100vh;
+  padding: 20px;
+  border-radius: 20px 20px 0 0;
+  width: 100%;
+  transform: translateY(100%);
+  transition: 0.8s;
+}
+.sheet.show .content {
+  transform: translateY(0%);
+}
+.sheet .content .content_body {
+  overflow-y: auto;
+  height: 100%;
+  padding: 15px 0 40px;
+  scrollbar-width: none;
+}
+.sheet .content .content_body::-webkit-scrollbar {
+  width: 0;
+}
+.sheet.movetransition .content {
+  transition: none;
+}
+.content_body h2 {
+  font-size: 30px;
+}
+.content_body p {
+  font-size: 23px;
+  padding: 15px;
+}
