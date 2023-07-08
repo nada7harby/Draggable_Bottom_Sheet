@@ -49,7 +49,7 @@ drag_icon.addEventListener("mousedown", dragstart);
 document.addEventListener("mousemove", draggable);
 
 document.addEventListener("touchend", dragend);
-drag_icon.addEventListener("touchdstart", dragstart);
+drag_icon.addEventListener("touchstart", dragstart);
 document.addEventListener("touchmove", draggable);
 
 btn.addEventListener("click", showDocment);
